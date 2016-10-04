@@ -1,0 +1,121 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Domain", "3 Domain", "{AB58482B-1988-4F50-BADD-B4D46BF8011A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Application", "2 Application", "{5B38B036-CA54-4362-AD18-D6D3589263AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Infrastrucuture", "4 Infrastrucuture", "{317C2041-57C3-4A08-BE73-F37C59E3B1A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Services", "1 Services", "{E40040D2-7E5B-4B24-832A-668A10EA435A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Presentation", "0 Presentation", "{793B3774-1C62-41DB-86E6-81F8322B21C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Data", "4.1 Data", "{7F4EB46E-A262-46D8-AD3A-45ED00BCDF6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 IoC", "4.1 IoC", "{D858348E-7CF3-4C66-B27C-27E4AA07D974}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 CrossCutting", "4.2 CrossCutting", "{ACEFF27C-32CC-416B-BF8B-63CAB252FD36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 Identity", "4.2 Identity", "{9AF5F856-5EEB-444C-AF43-3499C42152F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3 Services", "4.3 Services", "{0A01C78E-5284-412B-8A7A-250667757D64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1.1 DataSources", "4.1.1 DataSources", "{6AD26D45-00EE-4BDE-8D0F-0EA7A678F690}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1.2 ExternalSources", "4.1.2 ExternalSources", "{FD3AAE27-C40C-4DF4-84F0-D1BCB39C0A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Domain", "..\Auctionata.Domain\Auctionata.Domain.csproj", "{55652D2E-B843-4A30-A530-A16DCA5E1760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Domain.Tests", "..\Auctionata.Domain.Tests\Auctionata.Domain.Tests.csproj", "{043715C8-E6DB-45FE-9118-38D8BC5A75AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Infra.Data.Context", "..\Auctionata.Infra.Data.Context\Auctionata.Infra.Data.Context.csproj", "{582629A1-E18B-43F2-9CC8-3022E25A72CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Infra.Data.Repository", "..\Auctionata.Infra.Data.Repository\Auctionata.Infra.Data.Repository.csproj", "{E676D6BD-6757-4BE0-9A83-64662FD73D80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Application", "..\Auctionata.Application\Auctionata.Application.csproj", "{E6CECA49-A58C-47F0-8876-8EE84CE6CB1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auctionata.Presentation.WebAPI", "..\Auctionata.Presentation.WebAPI\Auctionata.Presentation.WebAPI.csproj", "{50207A7D-50B0-4F9E-A133-9D111E2053C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55652D2E-B843-4A30-A530-A16DCA5E1760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55652D2E-B843-4A30-A530-A16DCA5E1760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55652D2E-B843-4A30-A530-A16DCA5E1760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55652D2E-B843-4A30-A530-A16DCA5E1760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043715C8-E6DB-45FE-9118-38D8BC5A75AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043715C8-E6DB-45FE-9118-38D8BC5A75AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043715C8-E6DB-45FE-9118-38D8BC5A75AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043715C8-E6DB-45FE-9118-38D8BC5A75AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582629A1-E18B-43F2-9CC8-3022E25A72CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582629A1-E18B-43F2-9CC8-3022E25A72CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582629A1-E18B-43F2-9CC8-3022E25A72CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582629A1-E18B-43F2-9CC8-3022E25A72CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E676D6BD-6757-4BE0-9A83-64662FD73D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E676D6BD-6757-4BE0-9A83-64662FD73D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E676D6BD-6757-4BE0-9A83-64662FD73D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E676D6BD-6757-4BE0-9A83-64662FD73D80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6CECA49-A58C-47F0-8876-8EE84CE6CB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CECA49-A58C-47F0-8876-8EE84CE6CB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6CECA49-A58C-47F0-8876-8EE84CE6CB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CECA49-A58C-47F0-8876-8EE84CE6CB1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50207A7D-50B0-4F9E-A133-9D111E2053C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50207A7D-50B0-4F9E-A133-9D111E2053C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50207A7D-50B0-4F9E-A133-9D111E2053C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50207A7D-50B0-4F9E-A133-9D111E2053C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F4EB46E-A262-46D8-AD3A-45ED00BCDF6B} = {317C2041-57C3-4A08-BE73-F37C59E3B1A7}
+		{D858348E-7CF3-4C66-B27C-27E4AA07D974} = {ACEFF27C-32CC-416B-BF8B-63CAB252FD36}
+		{ACEFF27C-32CC-416B-BF8B-63CAB252FD36} = {317C2041-57C3-4A08-BE73-F37C59E3B1A7}
+		{9AF5F856-5EEB-444C-AF43-3499C42152F7} = {ACEFF27C-32CC-416B-BF8B-63CAB252FD36}
+		{0A01C78E-5284-412B-8A7A-250667757D64} = {ACEFF27C-32CC-416B-BF8B-63CAB252FD36}
+		{6AD26D45-00EE-4BDE-8D0F-0EA7A678F690} = {7F4EB46E-A262-46D8-AD3A-45ED00BCDF6B}
+		{FD3AAE27-C40C-4DF4-84F0-D1BCB39C0A8B} = {7F4EB46E-A262-46D8-AD3A-45ED00BCDF6B}
+		{55652D2E-B843-4A30-A530-A16DCA5E1760} = {AB58482B-1988-4F50-BADD-B4D46BF8011A}
+		{043715C8-E6DB-45FE-9118-38D8BC5A75AF} = {AB58482B-1988-4F50-BADD-B4D46BF8011A}
+		{582629A1-E18B-43F2-9CC8-3022E25A72CE} = {6AD26D45-00EE-4BDE-8D0F-0EA7A678F690}
+		{E676D6BD-6757-4BE0-9A83-64662FD73D80} = {7F4EB46E-A262-46D8-AD3A-45ED00BCDF6B}
+		{E6CECA49-A58C-47F0-8876-8EE84CE6CB1F} = {5B38B036-CA54-4362-AD18-D6D3589263AC}
+		{50207A7D-50B0-4F9E-A133-9D111E2053C2} = {E40040D2-7E5B-4B24-832A-668A10EA435A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://thiagolunardi.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\Auctionata.Domain\\Auctionata.Domain.csproj
+		SccProjectTopLevelParentUniqueName1 = Auctionata.sln
+		SccProjectName1 = ../Auctionata.Domain
+		SccLocalPath1 = ..\\Auctionata.Domain
+		SccProjectUniqueName2 = ..\\Auctionata.Domain.Tests\\Auctionata.Domain.Tests.csproj
+		SccProjectTopLevelParentUniqueName2 = Auctionata.sln
+		SccProjectName2 = ../Auctionata.Domain.Tests
+		SccLocalPath2 = ..\\Auctionata.Domain.Tests
+		SccProjectUniqueName3 = ..\\Auctionata.Infra.Data.Context\\Auctionata.Infra.Data.Context.csproj
+		SccProjectTopLevelParentUniqueName3 = Auctionata.sln
+		SccProjectName3 = ../Auctionata.Infra.Data.Context
+		SccLocalPath3 = ..\\Auctionata.Infra.Data.Context
+		SccProjectUniqueName4 = ..\\Auctionata.Infra.Data.Repository\\Auctionata.Infra.Data.Repository.csproj
+		SccProjectTopLevelParentUniqueName4 = Auctionata.sln
+		SccProjectName4 = ../Auctionata.Infra.Data.Repository
+		SccLocalPath4 = ..\\Auctionata.Infra.Data.Repository
+		SccProjectUniqueName5 = ..\\Auctionata.Application\\Auctionata.Application.csproj
+		SccProjectTopLevelParentUniqueName5 = Auctionata.sln
+		SccProjectName5 = ../Auctionata.Application
+		SccLocalPath5 = ..\\Auctionata.Application
+		SccProjectUniqueName6 = ..\\Auctionata.Presentation.WebAPI\\Auctionata.Presentation.WebAPI.csproj
+		SccProjectTopLevelParentUniqueName6 = Auctionata.sln
+		SccProjectName6 = ../Auctionata.Presentation.WebAPI
+		SccLocalPath6 = ..\\Auctionata.Presentation.WebAPI
+	EndGlobalSection
+EndGlobal

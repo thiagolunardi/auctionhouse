@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55652D2E-B843-4A30-A530-A16DCA5E1760}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Auctionata.Domain</RootNamespace>
+    <AssemblyName>Auctionata.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Bid.cs" />
+    <Compile Include="Entities\Buyer.cs" />
+    <Compile Include="Entities\IncrementalRule.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\Common\Identity.cs" />
+    <Compile Include="Entities\Types\BidType.cs" />
+    <Compile Include="Entities\Types\RoomStatus.cs" />
+    <Compile Include="Entities\Types\ItemStatus.cs" />
+    <Compile Include="Entities\Room.cs" />
+    <Compile Include="Entities\Validations\BidCanBeGivenValidation.cs" />
+    <Compile Include="Entities\Validations\BidIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\ItemCanBeginAnAuctionValidation.cs" />
+    <Compile Include="Entities\Validations\RoomCanPlaceBidValidation.cs" />
+    <Compile Include="Entities\Validations\RoomCanBeginAnAuctionValidation.cs" />
+    <Compile Include="Entities\Validations\RoomCanAddItemValidation.cs" />
+    <Compile Include="Entities\Validations\RoomCanReceiveNewIncrementalRuleValidation.cs" />
+    <Compile Include="Entities\Validations\RoomIsDelibleValidation.cs" />
+    <Compile Include="Entities\Validations\ItemIsDelibleValidation.cs" />
+    <Compile Include="Entities\Validations\RoomCanReceiveAttendantValidation.cs" />
+    <Compile Include="Entities\Validations\RoomIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\ItemIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\IncrementalRangeIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\BuyerIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\Specifications\BidSpecs\BidValueShoulBeEqualOrLowerCurrentBidThanSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\BidSpecs\BidShouldComplyIncremetalRuleSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\BidSpecs\BidOnlyAllowToInAuctionRoomSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\BuyerSpecs\BuyerShouldHaveCountrySpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\BuyerSpecs\BuyerShouldHaveNameSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\IncrementalRangeSpecs\IncrementalRangeIncrementShouldBeGraterThanZeroSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\IncrementalRangeSpecs\IncrementalRangeMinimumItemValueShouldBeGraterThanZeroSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\ItemSpecs\ItemStatusShouldBeToBeAuctionedSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\ItemSpecs\ItemEstimateShouldBeGreaterThanStartingBidSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\ItemSpecs\ItemStartingBidShouldBeGraterThanZeroSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\ItemSpecs\ItemEstimateShouldBeGreaterThanZeroSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\ItemSpecs\ItemShouldHavePictureSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\ItemSpecs\ItemShouldHaveDetailedInformationSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\ItemSpecs\ItemShouldHaveDescriptionSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\ItemSpecs\ItemShouldHaveNameSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\RoomSpecs\RoomShouldHaveOneOrMoreItemsSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\RoomSpecs\RoomStatusShouldBeInAuctionSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\RoomSpecs\RoomStatusShouldBeCreatedSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\RoomSpecs\RoomIncrementalRangesShouldAllBeValidSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\RoomSpecs\RoomShouldHaveOneOrMoreRangesSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\RoomSpecs\RoomShouldHaveVideoStreamingEndpointSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\RoomSpecs\RoomNumberShouldbeGraterThanZeroSpec.cs" />
+    <Compile Include="Entities\Validations\Specifications\SpecificationMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecificationMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Repository\IRoomRepository.cs" />
+    <Compile Include="Interfaces\Repository\IItemRepository.cs" />
+    <Compile Include="Interfaces\Repository\IBidRepository.cs" />
+    <Compile Include="Interfaces\Repository\IBuyerRepository.cs" />
+    <Compile Include="Interfaces\Services\IRoomService.cs" />
+    <Compile Include="Interfaces\Services\IBuyerService.cs" />
+    <Compile Include="Interfaces\Services\IBidService.cs" />
+    <Compile Include="Interfaces\Services\IItemService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\RoomQueries.cs" />
+    <Compile Include="Queries\ItemQueries.cs" />
+    <Compile Include="Queries\BuyerQueries.cs" />
+    <Compile Include="Services\RoomService.cs" />
+    <Compile Include="Services\ItemService.cs" />
+    <Compile Include="Services\BidService.cs" />
+    <Compile Include="Services\BuyerService.cs" />
+    <Compile Include="Specification\Inspector.cs" />
+    <Compile Include="Specification\Interfaces\IInspector.cs" />
+    <Compile Include="Specification\Interfaces\IRule.cs" />
+    <Compile Include="Specification\Interfaces\ISelfValidation.cs" />
+    <Compile Include="Specification\Interfaces\ISpecification.cs" />
+    <Compile Include="Specification\Rule.cs" />
+    <Compile Include="Validation\ValidationError.cs" />
+    <Compile Include="Validation\ValidationExtensions.cs" />
+    <Compile Include="Validation\ValidationResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Entities\Validations\Specifications\SpecificationMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SpecificationMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
