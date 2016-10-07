@@ -1,4 +1,4 @@
-# Auction House
+i Auction House
 
 Feature: Auction Scenarios
 --------------------------
@@ -31,7 +31,7 @@ Scenario 3: Multiple users biddeng on an item - you are first
     And my bid was placed first
     Then I am the highest bidder
 
-Scenario 4: Multiple users biddeng on an item - you are not first
+Scenario 4: Multiple users bidding on an item - you are not first
 -----------------------------------------------------------------
 
     Given I am in the auction room
