@@ -1,4 +1,4 @@
-i Auction House
+# Auction House
 
 Feature: Auction Scenarios
 --------------------------
