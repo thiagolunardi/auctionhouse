@@ -16,7 +16,7 @@ namespace Auctionata.Domain.Entities
         /// <summary>
         /// The item that will be auctioned in this room
         /// </summary>
-        public IEnumerable<Item> Items { get; private set; }
+        public ICollection<Item> Items { get; private set; }
 
         /// <summary>
         /// The current room number
@@ -34,17 +34,17 @@ namespace Auctionata.Domain.Entities
         /// <summary>
         /// All bids that was bidded during this room
         /// </summary>
-        public virtual IEnumerable<Bid> Bids { get; private set; }
+        public virtual ICollection<Bid> Bids { get; private set; }
         
         /// <summary>
         /// The incremental rules that will be applied at this room
         /// </summary>
-        public virtual IEnumerable<IncrementalRule> IncrementalRules { get; protected set; }
+        public virtual ICollection<IncrementalRule> IncrementalRules { get; protected set; }
 
         /// <summary>
         /// Whom is attending this auction room
         /// </summary>
-        public virtual IEnumerable<Buyer> Attendants { get; protected set; }
+        public virtual ICollection<Buyer> Attendants { get; protected set; }
 
         public Item CurrentItem => Items
             .Where(item => item.Status == ItemStatus.InAuction)
@@ -91,9 +91,7 @@ namespace Auctionata.Domain.Entities
                 return false;
             }
 
-            var attendants = Attendants.ToList();
-            attendants.Add(buyer);
-            Attendants = attendants;
+            Attendants.Add(buyer);
 
             return true;
         }
@@ -114,9 +112,7 @@ namespace Auctionata.Domain.Entities
                 return false;
             }
 
-            var incrementalRules = IncrementalRules.ToList();
-            incrementalRules.Add(incrementalRule);
-            IncrementalRules = incrementalRules;
+            IncrementalRules.Add(incrementalRule);
 
             return true;
         }
@@ -136,9 +132,7 @@ namespace Auctionata.Domain.Entities
                 return false;
             }
 
-            var items = Items.ToList();
-            items.Add(item);
-            Items = items;
+            Items.Add(item);
 
             return true;
         }

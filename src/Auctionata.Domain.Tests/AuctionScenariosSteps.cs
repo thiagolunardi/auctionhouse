@@ -29,7 +29,7 @@ namespace Auctionata.Domain.Tests
             attendants.ForEach(a => _auctionRoom.TryEnterAsAttendant(a));
 
             _previousBids = attendants.Select(a => a.CreateBid(_auctionRoom, _startingBid, BidType.Online));
-            Thread.Sleep(1500); // To be clear that any bid after here will be a lazy bid
+            Thread.Sleep(500); // To be clear that any bid after here will be a lazy bid
         }
 
         [Given(@"I am in the auction room")]
@@ -94,7 +94,7 @@ namespace Auctionata.Domain.Tests
             var success = _auctionRoom.TryPlaceBid(_myBid);
             Assert.IsTrue(success);
 
-            Thread.Sleep(1500); // To be clear that any bid after here will be a lazy bid
+            Thread.Sleep(500); // To be clear that any bid after here will be a lazy bid
 
             var lazyBids = Buyers.Where(b => b.Name != _me.Name).Select(a=>a.CreateBid(_auctionRoom, _startingBid, BidType.Online));
             foreach (var bid in lazyBids)
